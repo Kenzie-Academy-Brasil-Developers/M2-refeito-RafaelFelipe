@@ -35,7 +35,7 @@ async function requisicao(screch){
         recentes.push(data)
         
         localStorage.setItem("recentes",JSON.stringify(recentes)) 
-        setTimeout(window.location.assign("http://127.0.0.1:5500/M2-S4-14-gitSearchBase/pages/profile/index.html"
+        setTimeout(window.location.assign("https://kenzie-academy-brasil-developers.github.io/M2-refeito-RafaelFelipe/pages/profile/index.html"
         ,"/pages/profile/index.html"),1000)
     }catch(err){
         p.innerText = "não encontrado"
