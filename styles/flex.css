@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+
+}
+.align-item{
+    align-items: center;
+}
+.collum{
+    flex-direction: column;
+}
+.justify-content{
+    justify-content: center;
+}
+.space-between{
+    justify-content: space-between;
+}

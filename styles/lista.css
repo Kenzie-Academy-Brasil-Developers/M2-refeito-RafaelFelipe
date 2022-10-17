@@ -1,0 +1,35 @@
+.lista-li{
+    width: 90%;
+    border: solid 1px var(--color-grey-7);
+    height: 250px;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 10%;
+    margin-right: 10%;
+    
+}
+.lista-li-2{
+    width: 90%;
+    border: solid 1px var(--color-grey-7);
+    height: 250px;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 10%;
+    margin-left: 10%;
+}
+.suporte{
+    width: 90%;
+    height: 250px;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    padding: 5%;
+}
+.lista-ul{
+   margin-top: 4rem;
+   height: 50%;
+}
+.lista-ul-2{
+    margin-top: 4rem;
+    height: 50%;
+}
+

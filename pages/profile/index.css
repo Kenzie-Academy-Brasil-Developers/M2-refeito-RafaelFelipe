@@ -1,1 +1,21 @@
 /* Desenvolva sua estilização aqui...*/
+header{
+    width: 100vw;
+    height: auto;
+}
+
+body{
+    width: 100Vw;
+    height: 100vh;
+    background-color: var(--color-grey-1) ;
+    color: var(--color-grey-7);
+}
+.div-conteiner{
+    margin-top: 2rem;
+}
+.div-text{
+    width: 50%;
+}
+.section-ul{
+    height: 50%;
+}

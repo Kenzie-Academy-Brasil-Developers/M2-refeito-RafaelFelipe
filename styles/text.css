@@ -1,0 +1,58 @@
+.title{
+    font-size: 2rem;
+    line-height: 150%;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.text-p{
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 150%;
+    margin-bottom: 2rem;
+}
+.small-page-principal{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%
+}
+.subTitle-h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 150%;
+}
+.subTitle-h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 1rem;
+}
+.subTitle2-h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 150%;
+}
+.small-page-principal-2{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    background-color: var(--colo-grey-7);
+    opacity: 40%;
+}
+.lista-h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 1.3rem;
+}
+.lista-p{
+    font-size: 0.9rem;
+    line-height: 21px;
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+    opacity: 40%;
+    height: 60%;
+}
+.text-info{
+    margin-bottom: 1rem;
+    color: var(--color-alert);
+}
