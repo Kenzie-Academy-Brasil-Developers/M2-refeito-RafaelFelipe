@@ -60,12 +60,14 @@ function criaCards(arr){
         ul2.append(div)
     }
     filtrandoNull()
+    trocar()
 }
 let arquivos =JSON.parse(localStorage.getItem("repos"))
 
 function call(){
     if(arquivos !== null || arquivos !== undefined){
         criaCards(arquivos)
+        
     }
 }
 function filtrandoNull(){
@@ -76,16 +78,13 @@ function filtrandoNull(){
 
     localStorage.setItem("recentes",JSON.stringify(filtrados))
 }
-// function eventos(arr){
+function trocar(){
+    const button = document.querySelector(".button-trocar-header-page2")
+    console.log(button)
 
-    
-
-//     arr.forEach((element,i) => {
-//         const button_repos = document.getElementById(`${i}`)
-
-//         button_repos.addEventListener("click",(event) =>{
-            
-//         })
-//     })
-// }
+    button.addEventListener("click",(event) => {
+        setTimeout(window.location.assign("http://127.0.0.1:5500/pages/home/index.html"
+        ,"/pages/profile/index.html"),1000)
+    })
+}
 call()
