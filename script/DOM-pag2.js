@@ -1,4 +1,5 @@
 function criaCards(arr){
+    filtrandoNull()
     const ul = document.querySelector(".lista-ul")
     const ul2 = document.querySelector(".lista-ul-2")
 
@@ -59,8 +60,8 @@ function criaCards(arr){
         div.classList = "suporte"
         ul2.append(div)
     }
-    filtrandoNull()
     trocar()
+    
 }
 let arquivos =JSON.parse(localStorage.getItem("repos"))
 
@@ -83,7 +84,7 @@ function trocar(){
     console.log(button)
 
     button.addEventListener("click",(event) => {
-        setTimeout(window.location.assign("http://127.0.0.1:5500/pages/home/index.html"
+        setTimeout(window.location.assign("https://kenzie-academy-brasil-developers.github.io/M2-refeito-RafaelFelipe/pages/home/index.html"
         ,"/pages/profile/index.html"),1000)
     })
 }

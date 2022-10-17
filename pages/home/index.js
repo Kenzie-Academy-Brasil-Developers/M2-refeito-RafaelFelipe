@@ -14,9 +14,7 @@ function verificar(){
     let r = JSON.parse(localStorage.getItem("recentes"))|| []
     if(r.length <= 3){
         recentes2(r)
-    }
-
-         
+    }       
 }
 
 verificar()
