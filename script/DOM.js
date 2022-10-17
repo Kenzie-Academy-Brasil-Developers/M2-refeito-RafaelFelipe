@@ -15,7 +15,12 @@ function screch(){
 async function requisicao(screch){
     let recentes = []
     let p = document.querySelector(".text-info")
+    const button = document.querySelector(".button-screch")
     try{
+        button.innerHTML = ""
+        button.insertAdjacentHTML("afterbegin",`
+            <img class="reload" src="../assets/img/reload.png" alt="espera">
+        `)
         const result = await fetch(`https://api.github.com/users/${screch}`)
         const repos = await fetch (`https://api.github.com/users/${screch}/repos`)
         if(result.status == 404){
@@ -35,7 +40,7 @@ async function requisicao(screch){
         recentes.push(data)
         
         localStorage.setItem("recentes",JSON.stringify(recentes)) 
-        setTimeout(window.location.assign("https://kenzie-academy-brasil-developers.github.io/M2-refeito-RafaelFelipe/pages/profile/index.html"
+        setTimeout(window.location.assign("http://127.0.0.1:5500/pages/profile/index.html"
         ,"/pages/profile/index.html"),1000)
     }catch(err){
         p.innerText = "não encontrado"

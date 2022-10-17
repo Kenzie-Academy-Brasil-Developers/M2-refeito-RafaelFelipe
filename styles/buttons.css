@@ -29,11 +29,17 @@
 .repos{
     height: 1.7rem;
     margin-right: 1rem;
-    background-color: var(--color-brand-2);
+    background-color: var(--color-grey-1);
     color: var(--color-grey-7);
-    border: none;
+    border: solid  1px;
     border-radius: 4px;
    
+}
+.repos:hover{
+    
+    background-color: var(--color-brand-2);
+    color: var(--color-grey-7);
+  
 }
 .demo{
     background: none;
@@ -41,6 +47,12 @@
     color: var(--color-grey-7);
     border: solid 1px var(--color-grey-7);
     border-radius: 4px;
+}
+.demo:hover{
+    
+    background-color: var(--color-brand-2);
+    color: var(--color-grey-7);
+  
 }
 .img-user{
     width: 3rem;
