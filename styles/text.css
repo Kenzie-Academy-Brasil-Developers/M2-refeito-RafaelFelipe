@@ -56,3 +56,10 @@
     margin-bottom: 1rem;
     color: var(--color-alert);
 }
+.acesso{
+    color: var(--color-brand-1);
+}
+.teste:hover{
+    color: navy;
+    background-color: aqua;
+}

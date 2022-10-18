@@ -15,6 +15,7 @@ function screch(){
     })
 }
 async function requisicao(screch){
+    filtrandoNull()
     let recentes = []
     let p = document.querySelector(".text-info")
     const button = document.querySelector(".button-screch")
@@ -34,17 +35,21 @@ async function requisicao(screch){
         }
         const arquivos = await repos.json()
         const data = await result.json()
+
         const usuarios = JSON.parse(localStorage.getItem("recentes"))|| []
+        
         if(usuarios !== null && usuarios !== []){
             console.log(usuarios)
             recentes.push(usuarios[usuarios.length-1])
             recentes.push(usuarios[usuarios.length-2])
         }
+        recentes.push(data)
         localStorage.setItem("repos",JSON.stringify(arquivos))
         localStorage.setItem("users",JSON.stringify(data))
-        recentes.push(data)
+        
         
         localStorage.setItem("recentes",JSON.stringify(recentes)) 
+
         setTimeout(window.location.assign("https://kenzie-academy-brasil-developers.github.io/M2-refeito-RafaelFelipe/pages/profile/index.html"
         ,"/pages/profile/index.html"),1000)
         button.innerText = "Ver perfil github" 
@@ -54,7 +59,5 @@ async function requisicao(screch){
         
     }
     verificar()
-    
-     
 }
 screch()

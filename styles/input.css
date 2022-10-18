@@ -4,3 +4,6 @@
     border: none;
     margin-bottom: 1rem;
 }
+.button-screch:hover > body{
+    background-color: var(--color-grey-7);
+}
