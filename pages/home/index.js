@@ -36,11 +36,17 @@ async function acessoPorcard(){
     
     const img = document.querySelectorAll(".img-user2")
     const newArr = []
+    const button = document.querySelector(".button-screch")
+
     await img.forEach((element,i) => {
         
         
         element.addEventListener("click",(event) =>{  
             event.preventDefault()
+            button.innerHTML = ""
+            button.insertAdjacentHTML("afterbegin",`
+            <img class="reload" src="../assets/img/reload.png" alt="espera">
+            `)
             newArr.push(recentes[i])
             JSON.stringify(localStorage.setItem("users",JSON.stringify(newArr[0])))
             text = 
