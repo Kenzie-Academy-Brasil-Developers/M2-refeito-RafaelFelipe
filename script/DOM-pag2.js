@@ -1,10 +1,12 @@
-function criaCards(arr){
-    filtrandoNull()
-    const ul = document.querySelector(".lista-ul")
-    const ul2 = document.querySelector(".lista-ul-2")
-    arr.forEach((element,i) => {
-        if(i < arr.length/2){
-            ul.insertAdjacentHTML("afterbegin",`
+function criaCards(arr) {
+  filtrandoNull();
+  const ul = document.querySelector(".lista-ul");
+  const ul2 = document.querySelector(".lista-ul-2");
+  arr.forEach((element, i) => {
+    if (i < arr.length / 2) {
+      ul.insertAdjacentHTML(
+        "afterbegin",
+        `
                 <li class="lista-li">
                 <div class="width-9 height">
                     <div class="div-pp">
@@ -22,9 +24,12 @@ function criaCards(arr){
                 </div>
                 
                 </li>
-            `) 
-        }else{
-            ul2.insertAdjacentHTML("afterbegin",`
+            `
+      );
+    } else {
+      ul2.insertAdjacentHTML(
+        "afterbegin",
+        `
             <li class="lista-li-2">
             <div class="width-9 height">
                 <div class="div-pp">
@@ -39,59 +44,53 @@ function criaCards(arr){
             </div>
             </div>
             </li>
-            `) 
-        }
-        textSize()
-        
-        const button = document.getElementById(`but_${i}`)
-            button.addEventListener("click",(ev) =>{
-                ev.preventDefault()
-                window.open(`${element.homepage}`)
-            })
-            const repos = document.getElementById(`${i}`)
-            repos.addEventListener("click",(ev)=>{
-                ev.preventDefault()
-                window.open(`${element.html_url}`)
-            })
+            `
+      );
+    }
+    textSize();
+
+    const button = document.getElementById(`but_${i}`);
+    button.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      window.open(`${element.homepage}`);
     });
-    if(arr.length % 2 !== 0){
-        const div = document.createElement("div")
-        div.classList = "suporte"
-        ul2.append(div)
+    const repos = document.getElementById(`${i}`);
+    repos.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      window.open(`${element.html_url}`);
+    });
+  });
+  if (arr.length % 2 !== 0) {
+    const div = document.createElement("div");
+    div.classList = "suporte";
+    ul2.append(div);
+  }
+  trocar();
+}
+let arquivos = JSON.parse(localStorage.getItem("repos"));
+function call() {
+  if (arquivos !== null || arquivos !== undefined) {
+    criaCards(arquivos);
+  }
+}
+function trocar() {
+  const button = document.querySelector(".button-trocar-header-page2");
+
+  button.addEventListener("click", (event) => {
+    setTimeout(window.location.assign("/index.html", "/index.html"), 1000);
+  });
+}
+function textSize() {
+  const p = document.querySelectorAll(".lista-p");
+
+  p.forEach((element, i) => {
+    let check = element.innerText.length;
+    if (element.innerText.length >= 100) {
+      element.innerText = element.innerText.substring(check - 100);
     }
-    trocar()
-    
-}
-let arquivos = JSON.parse(localStorage.getItem("repos"))
-function call(){
-    if(arquivos !== null || arquivos !== undefined){
-        criaCards(arquivos)
-        
+    if (element.innerText.length >= 100) {
+      element.innerText = `${element.innerText}...`;
     }
+  });
 }
-function trocar(){
-    const button = document.querySelector(".button-trocar-header-page2")
-
-    button.addEventListener("click",(event) => {
-        setTimeout(window.location.assign("https://kenzie-academy-brasil-developers.github.io/M2-refeito-RafaelFelipe/pages/home/index.html"
-        ,"/pages/home/index.html"),1000)
-    })
-}
-function textSize(){
-    const p = document.querySelectorAll(".lista-p")
-
-
-    p.forEach((element,i) => {
-        let check = element.innerText.length
-        if(element.innerText.length >= 100){
-            element.innerText = element.innerText.substring(check-100)
-        }
-        if(element.innerText.length >= 100){
-            element.innerText = `${element.innerText}...`
-        }
-    })
-    
-   
-        
-}
-call()
+call();
